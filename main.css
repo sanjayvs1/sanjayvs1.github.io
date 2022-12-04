@@ -1,50 +1,12 @@
 body {
-  line-height: 1.3;
-  margin: auto;
   font-family: sans-serif;
-  background: #eee;
+  max-width: 860px;
+  margin: auto;
+  padding: 1em;
 }
 
 #logo {
   font-weight: bold;
-}
-
-.navlinks a {
-  padding: 0.2em 0.8em;
-  color: black;
-  border: 1px solid black;
   text-decoration: none;
-  background: #ffe;
-}
-
-.navlinks a:hover {
-  background: #222;
-  color: #fff;
-}
-
-.navlinks a:active {
-  border: 2px solid #eee;
-}
-
-.site-nav {
-  border-bottom: 1px solid #222;
-}
-
-.site-title {
-  background: #222;
-  color: #fff
-}
-
-.site-main {
-  background: #fff;
-}
-
-.site-footer {
-  border-top: 1px solid #222;
-}
-
-.header-wrapper, .footer-wrapper, .main-wrapper, .nav-wrapper, .title {
-  max-width: 860px;
-  margin: auto;
-  padding: 0.5em 1rem;
+  color: #000;
 }
