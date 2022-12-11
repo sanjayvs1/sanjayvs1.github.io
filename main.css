@@ -1,12 +1,10 @@
+html {
+  background: #eee;
+}
 body {
   font-family: sans-serif;
-  max-width: 860px;
+  max-width: 800px;
+  background: #fff;
   margin: auto;
   padding: 1em;
-}
-
-#logo {
-  font-weight: bold;
-  text-decoration: none;
-  color: #000;
 }
