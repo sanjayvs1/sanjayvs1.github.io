@@ -39,6 +39,10 @@ main {
 
 nav a {
   padding: 0.2em 0;
-  padding-right: 0.5em;
+  padding-right: 0.8em;
   color: black;
+}
+
+.main-content {
+  max-width: 860px;
 }

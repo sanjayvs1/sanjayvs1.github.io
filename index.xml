@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homepage on Sanjay V S</title>
+    <title>Sanjay V S</title>
     <link>/</link>
-    <description>Recent content in Homepage on Sanjay V S</description>
+    <description>Recent content on Sanjay V S</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 29 Sep 2022 20:15:52 +0530</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
@@ -15,6 +15,18 @@
       <guid>/blog/test/</guid>
       <description>Test heading Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus suscipit ex ut finibus. Vestibulum condimentum eros vel velit congue venenatis. Praesent eget imperdiet ante, ac euismod mi. Nullam at tellus elit. Donec nunc felis, gravida fermentum fermentum nec, volutpat sit amet velit. In pellentesque maximus varius. Cras interdum pellentesque rutrum. Etiam odio nisi, egestas in ipsum vitae, commodo sollicitudin ex.
 Test heading 2 Donec quis viverra quam. Vivamus nec finibus purus.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>I&amp;rsquo;m an engineering student, interested in software development.
+Favorite movies, shows, games and anime Movies: The Lost World: Jurassic Park
+Games: Jurassic Park: Operation Genesis
+Anime: Welcome To The N.H.K., Your Name</description>
     </item>
     
   </channel>
