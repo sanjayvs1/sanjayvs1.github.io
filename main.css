@@ -16,11 +16,12 @@ a {
 	text-decoration: none;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
 	text-decoration: underline;
 }
 
-p{
+p {
 	margin-bottom: 1.5em;
 }
 
