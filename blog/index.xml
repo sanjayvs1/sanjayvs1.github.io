@@ -6,16 +6,21 @@
     <description>Recent content in Blog on Sanjay Sudhakaran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Jan 2023 23:34:32 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 18 Feb 2024 00:13:38 +0530</lastBuildDate>
     <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software Review: Joplin</title>
+      <link>/blog/sr-joplin/</link>
+      <pubDate>Sun, 18 Feb 2024 00:13:38 +0530</pubDate>
+      <guid>/blog/sr-joplin/</guid>
+      <description>Joplin is a popular open-source note-taking application. I have been using Joplin for over a year now and here is my review:</description>
+    </item>
     <item>
       <title>Interesting old websites and ways to archive online content</title>
       <link>/blog/internet-history/</link>
       <pubDate>Mon, 16 Jan 2023 23:34:32 +0530</pubDate>
       <guid>/blog/internet-history/</guid>
-      <description>Oldest website - http://info.cern.ch/hypertext/WWW/TheProject.html
-Search engine for old websites - https://wiby.me
-Interesting old website archives https://wakaba.c3.cx/shii/shiichan http://tanasinn.info/wiki/Main_Page https://github.com/bibanon/bibanon/wiki/2channel https://wiki.bibanon.org/4chan/History - History of 4chan Find website archives online https://archive.</description>
+      <description>Oldest website - http://info.cern.ch/hypertext/WWW/TheProject.html&#xA;Search engine for old websites - https://wiby.me&#xA;Interesting old website archives https://wakaba.c3.cx/shii/shiichan http://tanasinn.info/wiki/Main_Page https://github.com/bibanon/bibanon/wiki/2channel https://wiki.bibanon.org/4chan/History - History of 4chan Find website archives online https://archive.</description>
     </item>
     <item>
       <title>This is a test post</title>

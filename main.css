@@ -3,21 +3,21 @@ body {
   font-family: sans-serif;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  background: #eee;
+  background: lightblue;
 }
 
 #logo {
-  color: #000;
   font-weight: bold;
+  text-decoration: none;
+  font-family: serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
 }
 
 a {
-  text-decoration: none;
-}
-
-a:hover,
-a:active {
-  text-decoration: underline;
+  color: #000;
 }
 
 p {
@@ -25,7 +25,7 @@ p {
 }
 
 nav {
-  padding: 0.5em 1em;
+  padding: 1em;
 }
 
 nav a {
@@ -33,14 +33,12 @@ nav a {
 }
 
 main {
-  padding: 0.5em 1em;
+  padding: 1em;
   background: #fff;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
 }
 
 div.wrapper {
-  max-width: 720px;
+  max-width: 700px;
   margin: auto;
 }
 
@@ -49,26 +47,15 @@ div.wrapper {
   padding-left: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #111;
-    color: #ffffff;
-  }
-  #logo {
-    color: #ffffff;
-  }
-  main {
-    background: #1f1f1f;
-    border: 0;
-  }
-  a {
-    color: #4ecdc4;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #ff6b6b;
-  }
-  a:active {
-    color: #ffd166;
-  }
+table tbody tr:nth-child(even) {
+  background-color: #eee;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: 0.4em;
+  vertical-align: top;
 }
