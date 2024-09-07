@@ -6,8 +6,15 @@
     <description>Recent content in Blog on Sanjay Sudhakaran</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Jan 2023 23:34:32 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 07 Sep 2024 15:59:02 +0530</lastBuildDate>
     <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux customization and indie software</title>
+      <link>/blog/linux-customization/</link>
+      <pubDate>Sat, 07 Sep 2024 15:59:02 +0530</pubDate>
+      <guid>/blog/linux-customization/</guid>
+      <description>I delved deep into this rabbit hole during lockdown and it was fun. Here are some cool things you can try if you are a Linux user:</description>
+    </item>
     <item>
       <title>Interesting old websites and ways to archive online content</title>
       <link>/blog/internet-history/</link>
