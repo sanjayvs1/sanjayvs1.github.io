@@ -4,8 +4,7 @@ body {
   overflow-wrap: break-word;
   word-wrap: break-word;
   background: lightblue;
-  line-height: 1.3;
-
+  line-height: 1.5;
 }
 
 #logo {
@@ -39,16 +38,12 @@ div.wrapper {
   margin: auto;
 }
 
-table tbody tr:nth-child(even) {
-  background-color: #eee;
+ul li {
+  margin-bottom: 0.5em;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td {
-  padding: 0.4em;
-  vertical-align: top;
+#posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
