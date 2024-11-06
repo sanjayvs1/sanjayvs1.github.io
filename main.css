@@ -1,21 +1,18 @@
 body {
-  margin: 0;
+  margin: auto;
   font-family: sans-serif;
   overflow-wrap: break-word;
   word-wrap: break-word;
   background: lightblue;
   line-height: 1.5;
+  max-width: 80ch;
 }
 
 #logo {
   font-weight: bold;
   text-decoration: none;
-  color: black;
+  font-size: 1.2em;
   font-family: serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0.5em 0;
 }
 
 nav {
@@ -31,11 +28,7 @@ main {
   padding: 0.5em 1em;
   background-color: #fff;
   margin-bottom: 1em;
-}
-
-div.wrapper {
-  max-width: 80ch;
-  margin: auto;
+  border-radius: 10px;
 }
 
 ul li {
@@ -46,4 +39,10 @@ ul li {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  main{
+    border-radius: 0;
+  }
 }
