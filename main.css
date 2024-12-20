@@ -4,8 +4,10 @@ body {
   overflow-wrap: break-word;
   word-wrap: break-word;
   background: lightblue;
-  line-height: 1.5;
+  line-height: 1.4;
   max-width: 80ch;
+  font-size: (1.5rem + 0.25vw);
+  text-rendering: optimizeLegibility;
 }
 
 #logo {
@@ -20,15 +22,15 @@ nav {
 }
 
 nav a {
-  margin-right: 0.6em;
-  color: black;
+  margin-right: 0.5em;
+  color:#000;
 }
 
 main {
   padding: 0.5em 1em;
   background-color: #fff;
   margin-bottom: 1em;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 ul li {
@@ -37,11 +39,11 @@ ul li {
 
 #posts {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 1em 0;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 80ch) {
   main{
     border-radius: 0;
   }
