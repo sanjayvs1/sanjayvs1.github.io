@@ -1,15 +1,7 @@
-@font-face {
-  font-family: 'Charis SIL';
-  src: url('/fonts/CharisSIL-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
 body {
   margin: 50px auto;
-  font-family: 'Charis SIL', sans-serif;
-  font-size: 18px;
+  font-family: sans-serif;
+  font-size: 16px;
   overflow-wrap: break-word;
   word-wrap: break-word;
   line-height: 1.4;
