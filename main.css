@@ -1,50 +1,18 @@
+@font-face {
+  font-family: 'Charis SIL';
+  src: url('/fonts/CharisSIL-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
-  margin: auto;
-  font-family: sans-serif;
+  margin: 50px auto;
+  font-family: 'Charis SIL', sans-serif;
+  font-size: 18px;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  background: lightblue;
   line-height: 1.4;
-  max-width: 80ch;
-  font-size: (1.5rem + 0.25vw);
+  max-width: 650px;
   text-rendering: optimizeLegibility;
-}
-
-#logo {
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.2em;
-  font-family: serif;
-}
-
-nav {
-  padding: 1em;
-}
-
-nav a {
-  margin-right: 0.5em;
-  color:#000;
-}
-
-main {
-  padding: 0.5em 1em;
-  background-color: #fff;
-  margin-bottom: 1em;
-  border-radius: 4px;
-}
-
-ul li {
-  margin-bottom: 0.5em;
-}
-
-#posts {
-  list-style: none;
-  padding: 0;
-  margin: 1em 0;
-}
-
-@media only screen and (max-width: 80ch) {
-  main{
-    border-radius: 0;
-  }
 }
