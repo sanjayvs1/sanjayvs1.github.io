@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Sanjay Sudhakaran</title><link>/blog/</link><description>Recent content in Blog on Sanjay Sudhakaran</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 07 Sep 2024 15:59:02 +0530</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux customization and indie software</title><link>/blog/linux-customization/</link><pubDate>Sat, 07 Sep 2024 15:59:02 +0530</pubDate><guid>/blog/linux-customization/</guid><description>&lt;p&gt;I delved deep into this rabbit hole during lockdown and it was fun. Here are some cool things you can try if you are a Linux user:&lt;/p&gt;</description></item><item><title>Interesting old websites and ways to archive online content</title><link>/blog/internet-history/</link><pubDate>Mon, 16 Jan 2023 23:34:32 +0530</pubDate><guid>/blog/internet-history/</guid><description>&lt;p&gt;Oldest website - &lt;a href="http://info.cern.ch/hypertext/WWW/TheProject.html"&gt;http://info.cern.ch/hypertext/WWW/TheProject.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Search engine for old websites - &lt;a href="https://wiby.me"&gt;https://wiby.me&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="interesting-old-website-archives"&gt;Interesting old website archives&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://wakaba.c3.cx/shii/shiichan"&gt;https://wakaba.c3.cx/shii/shiichan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://tanasinn.info/wiki/Main_Page"&gt;http://tanasinn.info/wiki/Main_Page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/bibanon/bibanon/wiki/2channel"&gt;https://github.com/bibanon/bibanon/wiki/2channel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wiki.bibanon.org/4chan/History"&gt;https://wiki.bibanon.org/4chan/History&lt;/a&gt; - History of 4chan&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="find-website-archives-online"&gt;Find website archives online&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://archive.today/"&gt;https://archive.today/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://archive.org/"&gt;https://archive.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ways-to-download-webpagescontent-for-archiving"&gt;Ways to download webpages/content for archiving&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.httrack.com/"&gt;https://www.httrack.com/&lt;/a&gt; - Software to download websites. Usage: &lt;code&gt;httrack https://www.wikipedia.org/wiki/UNIX/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ytdl-org/youtube-dl"&gt;https://github.com/ytdl-org/youtube-dl&lt;/a&gt; - Download YouTube videos&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mikf/gallery-dl"&gt;https://github.com/mikf/gallery-dl&lt;/a&gt; - Download image galleries in bulk&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>This is a test post</title><link>/blog/test/</link><pubDate>Thu, 29 Sep 2022 20:15:52 +0530</pubDate><guid>/blog/test/</guid><description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non dolor eu dolor egestas fringilla. Vivamus porta efficitur scelerisque. Curabitur arcu lacus, placerat sit amet mi id, venenatis fermentum tellus. Donec augue enim, aliquam vitae dolor nec, vestibulum efficitur massa. Vestibulum tempor augue ut eros ultrices, non vehicula risus ornare. Cras laoreet ut odio sed sagittis. Curabitur ultricies malesuada nunc.&lt;/p&gt;</description></item></channel></rss>
