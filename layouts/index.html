@@ -1,0 +1,15 @@
+{{ partial "header.html" . }} {{ .Content }}
+
+
+  {{ range (where (where .Site.RegularPages "Section" "blog") "Params.nohtml"
+  "!=" "true") }} {{- if .OutputFormats.Get "html" }}
+    <p>
+      <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+      <br />
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </p>
+  
+  {{ end }} {{ end }}
+
+
+{{ partial "footer.html" . }}

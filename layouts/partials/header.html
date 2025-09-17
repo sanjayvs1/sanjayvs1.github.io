@@ -3,13 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tags</title>
+<title>{{ .Title }}</title>
 <link rel="stylesheet" href="/main.css">
 
-<link rel="alternate" type="application/rss+xml" href="/tags/index.xml" title="Sanjay Sudhakaran" />
+{{ with .OutputFormats.Get "rss" -}}
+	{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+
 <link rel="icon" type="image/jpeg" href="/old computer.jpeg">
 
-
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-37Z4WHLLWZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -25,16 +28,6 @@
 		<a href="/">Home</a> ·
 		<a href="https://github.com/sanjayvs1" target="_blank">Github</a> ·
 		<a href="mailto:datromix@gmail.com">Email</a>
-		
-		<h1 class="title">Tags</h1>
-  		
- 
-
-<ul>
-  
-</ul>
-
-</main>
-</body>
-</html>
-
+		{{ if not .IsHome }}
+		<h1 class="title">{{ .Title }}</h1>
+  		{{ end }}
