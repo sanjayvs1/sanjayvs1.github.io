@@ -1,23 +1,21 @@
-@font-face {
-  font-family: "Charis SIL";
-  src: url("/CharisSIL-Regular.woff2") format("woff2");
-}
-
-html {
-  border-top: 10px solid #005577;
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
   margin: 50px auto;
   padding: 12px;
-  font-family: "Charis SIL", sans-serif;
-  font-size: 17px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
   overflow-wrap: break-word;
   line-height: 1.4;
   max-width: 650px;
   text-rendering: optimizeLegibility;
 }
 
-a {
-  text-decoration: none;
+a[href^="http"]::after {
+  content: "↗";
 }
