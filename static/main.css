@@ -15,7 +15,3 @@ body {
   max-width: 650px;
   text-rendering: optimizeLegibility;
 }
-
-a[href^="http"]::after {
-  content: "↗";
-}
