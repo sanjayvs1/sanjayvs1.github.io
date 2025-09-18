@@ -1,6 +1,6 @@
 {{ partial "header.html" . }} {{ .Content }}
 
-
+<div class="posts">
   {{ range (where (where .Site.RegularPages "Section" "blog") "Params.nohtml"
   "!=" "true") }} {{- if .OutputFormats.Get "html" }}
     <p>
@@ -10,6 +10,7 @@
     </p>
   
   {{ end }} {{ end }}
+</div>
 
 
 {{ partial "footer.html" . }}
