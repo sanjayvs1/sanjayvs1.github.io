@@ -10,7 +10,7 @@
 	{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
-<link rel="icon" type="image/jpeg" href="/old computer.jpeg">
+<link rel="icon" type="image/jpeg" href="/favicon.ico">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-37Z4WHLLWZ"></script>
@@ -28,10 +28,12 @@
 
 </head>
 <body>
-	<main>
+	<nav>
 		<a href="/">Home</a> ·
 		<a href="https://github.com/sanjayvs1" target="_blank">Github</a> ·
 		<a href="mailto:datromix@gmail.com">datromix@gmail.com</a>
+	</nav>
+	<main>
 		{{ if not .IsHome }}
 		<h1 class="title">{{ .Title }}</h1>
   		{{ end }}
