@@ -1,0 +1,29 @@
+{{ partial "header.html" . }}
+
+<div class="projects-grid">
+  {{ range .Site.Data.projects }}
+  <div class="project-card">
+    {{ if .img }}
+    <div class="project-image">
+      <img src="{{ .img }}" alt="{{ .title }}">
+    </div>
+    {{ end }}
+    <div class="project-content">
+      <h3 class="project-title">{{ .title }}</h3>
+      <p class="project-description">{{ .description }}</p>
+      {{ if .tags }}
+      <div class="project-tags">
+        {{ range .tags }}
+        <span class="tag">{{ . }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+      <div class="project-link">
+        <a href="{{ .url }}">View Project →</a>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>
+
+{{ partial "footer.html" . }}

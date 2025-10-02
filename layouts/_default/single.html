@@ -1,3 +1,6 @@
 {{ partial "header.html" . }} {{ if .Date }}
 <p>{{ .Date.Format "January 2, 2006" }}</p>
-{{end}} {{ .Content }} {{ partial "footer.html" . }}
+{{end}} 
+<div class="main-content">
+  {{ .Content }}
+</div> {{ partial "footer.html" . }}

@@ -1,0 +1,102 @@
+[
+    {
+        "title": "ChaiChat",
+        "description": "A desktop chat app that lets you talk to AI models running locally on your computer",
+        "tags": [
+            "Electron",
+            "Vite",
+            "React",
+            "SQLite"
+        ],
+        "url": "https://github.com/sanjayvs1/chaichat",
+        "img": "https://res.cloudinary.com/dzcok6v7w/image/upload/v1753796745/Screenshot_From_2025-07-29_19-14-43_fz8v4n.png"
+    },
+    {
+        "title": "Karuna AI",
+        "description": "An AI companion app designed to help elderly users, made it to top 10 at Hackoverflow 3.0",
+        "tags": [
+            "React",
+            "PWA",
+            "Three.js",
+            "Azure Speech API",
+            "Twilio"
+        ],
+        "url": "https://github.com/sanjayvs1/ho3",
+        "img": "https://res.cloudinary.com/dzcok6v7w/image/upload/v1744380493/Screenshot_From_2025-03-23_17-26-17_pbfscn.png"
+    },
+    {
+        "title": "Bytestream 2025",
+        "description": "Interactive website for Bytestream Magazine 2025 with smooth animations",
+        "tags": [
+            "Three.js",
+            "Vite",
+            "React",
+            "Tailwind v4",
+            "Lenis"
+        ],
+        "url": "https://bytestream2025.vercel.app",
+        "img": "https://res.cloudinary.com/dzcok6v7w/image/upload/v1744380577/Screenshot_From_2025-04-11_19-39-21_vkicrl.png"
+    },
+    {
+        "title": "Samarthan",
+        "description": "A learning platform that breaks down complex problems into manageable steps",
+        "tags": [
+            "MongoDB",
+            "Express",
+            "ReactJS",
+            "NodeJS"
+        ],
+        "url": "https://samarthan.vercel.app/",
+        "img": "https://res.cloudinary.com/dzcok6v7w/image/upload/v1744380492/Screenshot_From_2025-03-23_17-28-43_csafmb.png"
+    },
+    {
+        "title": "Vidhyasarthi",
+        "description": "Mock test platform for Indian entrance exams like JEE and MHTCET",
+        "tags": [
+            "MongoDB",
+            "Express",
+            "React",
+            "NodeJS"
+        ],
+        "url": "https://vidhyasarthi.com/",
+        "img": "https://res.cloudinary.com/dzcok6v7w/image/upload/v1758814887/Screenshot_From_2025-09-25_21-10-35_zyslmu.png"
+    },
+    {
+        "title": "SoulBuddy",
+      "description": "Astrology and personality insights app built during Level Supermind Hackathon",
+        "tags": [
+            "MERN",
+            "Swiss Ephemeris API"
+        ],
+        "url": "https://github.com/sanjayvs1/supermind",
+        "img": "https://res.cloudinary.com/dzcok6v7w/image/upload/v1744380492/Screenshot_From_2025-03-23_17-29-18_hzz1xg.png"
+    },
+    {
+        "title": "Vimarsha",
+        "description": "Telegram bot that detects drug trafficking in group chats",
+        "tags": [
+            "Flask",
+            "Express.js",
+            "OpenCV",
+            "TensorFlow",
+            "YOLOv8"
+        ],
+        "url": "https://github.com/sanjayvs1/sih24"
+    },
+    {
+        "title": "MeetHub",
+        "description": "Meeting tool that summarizes calls and lets you search for specific topics",
+        " tags": [
+            "WebRTC"
+        ],
+        "url": "https://github.com/sanjayvs1/mumbaihacks"
+    },
+    {
+        "title": "Mingen",
+        "description": "A simple static site generator built with Python",
+        "tags": [
+            "Python"
+        ],
+        "url": "https://github.com/sanjayvs1/mingen"
+    }
+]

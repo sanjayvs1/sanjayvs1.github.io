@@ -1,16 +1,55 @@
-{{ partial "header.html" . }} {{ .Content }}
+{{ partial "header.html" . }}
 
-<div class="posts">
-  {{ range (where (where .Site.RegularPages "Section" "blog") "Params.nohtml"
-  "!=" "true") }} {{- if .OutputFormats.Get "html" }}
-    <p>
-      <span>{{ .Date.Format "Jan 2, 2006" }}</span>
-      <br />
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </p>
-  
-  {{ end }} {{ end }}
+<div class="homepage-layout">
+  <div class="main-content">
+    {{ .Content }}
+
+    <p>I sometimes write a blog post ↓↓↓</p>
+
+    <div class="posts">
+      {{ range (where (where .Site.RegularPages "Section" "blog") "Params.nohtml"
+      "!=" "true") }} {{- if .OutputFormats.Get "html" }}
+        <p>
+          <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+          <br />
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </p>
+      
+      {{ end }} {{ end }}
+    </div>
+  </div>
+
+  <div class="projects-sidebar">
+    <div class="projects-sidebar-header">
+      <h3>Recent Projects</h3>
+    <a href="/projects" class="view-all-projects">View All Projects</a>
+    </div>
+    <div class="projects-grid">
+      {{ range first 2 .Site.Data.projects }}
+      <div class="project-card">
+        {{ if .img }}
+        <div class="project-image">
+          <img src="{{ .img }}" alt="{{ .title }}">
+        </div>
+        {{ end }}
+        <div class="project-content">
+          <h4 class="project-title">{{ .title }}</h4>
+          <p class="project-description">{{ .description }}</p>
+          {{ if .tags }}
+          <div class="project-tags">
+            {{ range .tags }}
+            <span class="tag">{{ . }}</span>
+            {{ end }}
+          </div>
+          {{ end }}
+          <div class="project-link">
+            <a href="{{ .url }}">View Project →</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
 </div>
-
 
 {{ partial "footer.html" . }}
