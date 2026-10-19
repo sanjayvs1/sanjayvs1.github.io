@@ -1,39 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ .Site.LanguageCode | default "en" }}">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{{ .Title }}</title>
-<link rel="stylesheet" href="/main.css">
-
-{{ with .OutputFormats.Get "rss" -}}
-	{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-{{ end -}}
-
-<link rel="icon" type="image/jpeg" href="/favicon.ico">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-37Z4WHLLWZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-37Z4WHLLWZ');
-</script>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ if .IsHome }}A software tinkerer and hacker from Navi Mumbai, India.{{ else }}{{ .Summary | plainify | truncate 155 }}{{ end }}">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f8f9f5">
+<script src="{{ "theme.js" | relURL }}"></script>
+<link rel="stylesheet" href="{{ "main.css" | relURL }}">
+<link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+{{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Site.Title }}">{{ end }}
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-37Z4WHLLWZ"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-37Z4WHLLWZ');</script>
 </head>
 <body>
-	<nav>
-		<a href="/">Home</a> ·
-		<a href="/projects">Projects</a> ·
-		<a href="https://github.com/sanjayvs1" target="_blank">Github</a> ·
-		<a href="mailto:datromix@gmail.com">datromix@gmail.com</a>
-	</nav>
-	<main>
-		{{ if not .IsHome }}
-		<h1 class="title">{{ .Title }}</h1>
-  		{{ end }}
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap">
+<a class="brand" href="{{ "/" | relURL }}" aria-label="Sanjay Sudhakaran, home" {{ if .IsHome }}aria-current="page"{{ end }}><img class="brand-avatar" src="{{ "favicon.ico" | relURL }}" width="28" height="28" alt=""><span>{{ .Site.Title }}</span></a>
+<nav aria-label="Main navigation">
+<a href="{{ "/projects/" | relURL }}" {{ if eq .Section "projects" }}aria-current="page"{{ end }}>Projects</a>
+<a href="{{ "/blog/" | relURL }}" {{ if eq .Section "blog" }}aria-current="page"{{ end }}>Blog</a>
+{{/* Resume PDF link paused: {{ partial "resume-link.html" . }} */}}
+<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode" hidden>
+<svg class="theme-moon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.5 13A8.6 8.6 0 0 1 11 3.5a8.6 8.6 0 1 0 9.5 9.5Z"/></svg>
+<svg class="theme-sun" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2"/></svg>
+</button>
+</nav>
+</header>
+<main id="main" class="wrap" tabindex="-1">

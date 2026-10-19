@@ -1,29 +1,4 @@
 {{ partial "header.html" . }}
-
-<div class="projects-grid">
-  {{ range .Site.Data.projects }}
-  <div class="project-card">
-    {{ if .img }}
-    <div class="project-image">
-      <img src="{{ .img }}" alt="{{ .title }}">
-    </div>
-    {{ end }}
-    <div class="project-content">
-      <h3 class="project-title">{{ .title }}</h3>
-      <p class="project-description">{{ .description }}</p>
-      {{ if .tags }}
-      <div class="project-tags">
-        {{ range .tags }}
-        <span class="tag">{{ . }}</span>
-        {{ end }}
-      </div>
-      {{ end }}
-      <div class="project-link">
-        <a href="{{ .url }}">View Project →</a>
-      </div>
-    </div>
-  </div>
-  {{ end }}
-</div>
-
+<header class="page-heading"><h1>{{ .Title }}</h1>{{ .Content }}</header>
+<section aria-labelledby="gallery-title"><h2 id="gallery-title" class="visually-hidden">Projects</h2><div class="projects-grid project-archive">{{ range hugo.Data.projects }}{{ partial "project-card.html" . }}{{ end }}</div></section>
 {{ partial "footer.html" . }}

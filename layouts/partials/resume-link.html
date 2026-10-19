@@ -1,0 +1,5 @@
+{{- with site.Params.resumePDF -}}
+<a class="resume-link" href="{{ . | relURL }}">Resume <span class="file-type">PDF</span><span aria-hidden="true">↗</span></a>
+{{- else -}}
+<span class="resume-link is-placeholder" aria-disabled="true" title="PDF not added yet">Resume <span class="file-type">PDF</span><span aria-hidden="true">↗</span></span>
+{{- end -}}

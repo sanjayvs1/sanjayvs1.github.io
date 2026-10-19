@@ -2,3 +2,6 @@ baseURL = '/'
 languageCode = 'en-us'
 title = 'Sanjay Sudhakaran'
 summaryLength = 20
+[params]
+# Set to a PDF URL or add static/resume.pdf and use "/resume.pdf".
+resumePDF = ""

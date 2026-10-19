@@ -1,0 +1,5 @@
+{{ $linked := and .url (ne .linkEnabled false) }}
+<article class="project-card{{ if not $linked }} project-display-only{{ end }}">
+  {{ if $linked }}<a class="project-image" href="{{ .url }}" tabindex="-1" aria-hidden="true">{{ else }}<div class="project-image">{{ end }}{{ if .img }}<img src="{{ .img }}" alt="" loading="lazy" width="800" height="500">{{ else }}<span class="project-placeholder">{{ substr .title 0 1 }}</span>{{ end }}{{ if $linked }}</a>{{ else }}</div>{{ end }}
+  <div class="project-content"><div class="project-title-row"><h3>{{ if $linked }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</h3>{{ if $linked }}<span aria-hidden="true">↗</span>{{ end }}</div><p>{{ .description }}</p>{{ with .tags }}<ul class="project-tags" aria-label="Technologies">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}</div>
+</article>

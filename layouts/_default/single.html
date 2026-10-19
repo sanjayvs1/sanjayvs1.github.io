@@ -1,6 +1,12 @@
-{{ partial "header.html" . }} {{ if .Date }}
-<p>{{ .Date.Format "January 2, 2006" }}</p>
-{{end}} 
-<div class="main-content">
-  {{ .Content }}
-</div> {{ partial "footer.html" . }}
+{{ partial "header.html" . }}
+{{ $isBlog := eq .Section "blog" }}
+{{ $toc := and $isBlog (ge (len .Fragments.Identifiers) 3) }}
+<article class="article-layout{{ if $toc }} has-toc{{ end }}">
+  <header class="article-heading"><a class="subtle-link" href="{{ if $isBlog }}{{ "/blog/" | relURL }}{{ else }}{{ "/" | relURL }}{{ end }}">← {{ if $isBlog }}Blog{{ else }}Home{{ end }}</a><h1>{{ .Title }}</h1>{{ if $isBlog }}<div class="article-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time><span aria-hidden="true">·</span><span>{{ .ReadingTime }} min</span></div>{{ with .GetTerms "tags" }}<ul class="article-tags" aria-label="Tags">{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}</ul>{{ end }}{{ end }}</header>
+  <div class="article-body-layout">
+    {{ if $toc }}<aside class="article-toc" aria-label="Contents"><details open><summary>Contents</summary>{{ .TableOfContents }}</details></aside>{{ end }}
+    <div class="prose">{{ .Content }}</div>
+  </div>
+  {{ if $isBlog }}<nav class="article-pagination" aria-label="More posts">{{ with .PrevInSection }}<a href="{{ .RelPermalink }}"><span>Older post</span>{{ .Title }}</a>{{ end }}{{ with .NextInSection }}<a href="{{ .RelPermalink }}"><span>Newer post</span>{{ .Title }}</a>{{ end }}</nav><div class="article-end"><a class="text-link" href="{{ "/blog/" | relURL }}">← Blog</a><a class="text-link" href="{{ "/blog/index.xml" | relURL }}">RSS ↗</a></div>{{ end }}
+</article>
+{{ partial "footer.html" . }}

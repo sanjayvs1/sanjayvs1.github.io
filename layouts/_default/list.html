@@ -1,11 +1,24 @@
-{{ partial "header.html" . }} {{ .Content }}
-
-<ul>
-  {{ range.Data.Pages }}
-  <li>
-    {{ .Date.Format "2006.01" }} <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-  </li>
-  {{ end }}
-</ul>
-
+{{ partial "header.html" . }}
+<header class="page-heading"><h1>{{ .Title }}</h1>{{ .Content }}{{ with .OutputFormats.Get "rss" }}<a class="text-link" href="{{ .RelPermalink }}">RSS ↗</a>{{ end }}</header>
+{{ if eq .Section "blog" }}
+{{ $posts := where .RegularPages "Params.nohtml" "!=" "true" }}
+{{ $paginator := .Paginate $posts.ByDate.Reverse 12 }}
+<section class="blog-archive" aria-labelledby="entries-title" data-blog-index="{{ with .OutputFormats.Get "json" }}{{ .RelPermalink }}{{ end }}">
+  <h2 id="entries-title" class="visually-hidden">Blog</h2>
+  <div class="blog-tools" hidden>
+    <label for="blog-search">Search posts</label>
+    <div class="search-field"><input id="blog-search" type="search" placeholder="Title, topic, or phrase" autocomplete="off" aria-controls="search-results" aria-describedby="search-status"><button type="button" id="clear-search" hidden>Clear</button></div>
+    <p id="search-status" class="archive-status" role="status" aria-live="polite">{{ len $posts }} posts</p>
+  </div>
+  <div id="archive-pages">
+    {{ range $paginator.Pages.GroupByDate "2006" }}<section class="archive-year" aria-labelledby="year-{{ .Key }}"><h2 id="year-{{ .Key }}">{{ .Key }}</h2><div class="post-list">{{ range .Pages }}{{ partial "post-row.html" . }}{{ end }}</div></section>{{ end }}
+    {{ if gt $paginator.TotalPages 1 }}<nav class="pagination" aria-label="Blog pages">{{ with $paginator.Prev }}<a href="{{ .URL }}">← Newer posts</a>{{ end }}<span>Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</span>{{ with $paginator.Next }}<a href="{{ .URL }}">Older posts →</a>{{ end }}</nav>{{ end }}
+  </div>
+  <div id="search-results" hidden></div>
+  <button type="button" class="more-results" id="more-results" hidden>Show more</button>
+</section>
+<script src="{{ "blog-search.js" | relURL }}" defer></script>
+{{ else }}
+<section aria-labelledby="entries-title"><h2 id="entries-title" class="visually-hidden">{{ .Title }}</h2><div class="post-list archive-list">{{ range .Pages }}{{ if and (ne .Params.nohtml "true") (.OutputFormats.Get "html") }}{{ partial "post-row.html" . }}{{ end }}{{ end }}</div></section>
+{{ end }}
 {{ partial "footer.html" . }}

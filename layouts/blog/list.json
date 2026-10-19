@@ -1,0 +1,7 @@
+{{- $posts := slice -}}
+{{- range (where .RegularPages "Params.nohtml" "!=" "true").ByDate.Reverse -}}
+  {{- if .OutputFormats.Get "html" -}}
+    {{- $posts = $posts | append (dict "title" .Title "url" .RelPermalink "date" (.Date.Format "Jan 02, 2006") "year" (.Date.Format "2006") "minutes" .ReadingTime "summary" (.Plain | htmlUnescape | truncate 180) "content" (.Plain | htmlUnescape) "tags" (.Params.tags | default slice)) -}}
+  {{- end -}}
+{{- end -}}
+{{- $posts | jsonify -}}
