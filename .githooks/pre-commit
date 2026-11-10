@@ -14,4 +14,4 @@ if ! hugo --gc --minify --cleanDestinationDir --quiet; then
     exit 1
 fi
 
-git add -A public
+git add -A docs
