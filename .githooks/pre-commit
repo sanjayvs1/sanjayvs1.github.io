@@ -1,0 +1,17 @@
+#!/bin/sh
+# Rebuilds the Hugo site into public/ and stages it with every commit,
+# so the committed public/ folder is always ready to deploy.
+
+if ! command -v hugo >/dev/null 2>&1; then
+    echo "pre-commit: hugo not found on PATH; aborting commit." >&2
+    echo "pre-commit: install Hugo extended or bypass with --no-verify." >&2
+    exit 1
+fi
+
+echo "pre-commit: building site with hugo..."
+if ! hugo --gc --minify --cleanDestinationDir --quiet; then
+    echo "pre-commit: hugo build failed; aborting commit." >&2
+    exit 1
+fi
+
+git add -A public
